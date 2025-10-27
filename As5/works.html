@@ -28,9 +28,17 @@
         <div class="logo"><a href=#><img src= "assets/logo.png" alt="logo" > </a>
          </div>
         <div class="menu1">
+            <button class="close-menu">&times;</button>
     <a href="index.html">INDEX</a><br>
-    <a href="bio.html">STORIES</a><br>
-    <a href="works.html">ABOUT</a>
+    <a href="bio.html" class="menuI">STORIES</a><br>
+    <a href="works.html" class="menuI">ABOUT</a>
+    </div>
+
+    <!-- Hamberger Menu for mobile -->
+    <div class="hamburger-menu">
+        <button>
+            <span class="fa fa-bars"></span>
+        </button>
     </div>
     </nav>
 <div id="wrapper">
@@ -52,13 +60,12 @@
     Taken together, these portraits and captions became the subject of a vibrant blog. HONY now has over twenty million followers on social media, and provides a worldwide audience with daily glimpses into the lives of strangers on the streets of New York City. </p>
 
 
+        </div>
         <hr class="solid">
         <div class="books">
         <figure class="im1">
-            <img src="assets/america_pageant.jpg"
-            class="im"
-             alt="america pageant" loading=lazy>
-            <figcaption>America Pageant</figcaption>
+            <a href="#"><img src="assets/america_pageant.jpg" class="im"></a>
+            <div class="hover-text"> America Pageant</div>
         </figure>
          <figure class="im2">
             <img src="assets/Chipwich_guy.jpg" 
@@ -119,13 +126,12 @@
             alt="the algorithm" loading=lazy>
             <figcaption>The Algorithm</figcaption>
         </figure>       
-        <figure class="11">
+        <figure class="im11">
             <img src="assets/The_Empire.jpg" 
             class="im"
             alt="the The_Empire" loading=lazy>
             <figcaption>The Empire</figcaption>
         </figure>
-                </figure>    
         <figure class="im12">
             <img src="assets/they_loved_me.jpg" 
             class="im"
@@ -161,7 +167,22 @@
 
 </div>
 
-</head>
-    
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
+
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
 </body>
 </html>

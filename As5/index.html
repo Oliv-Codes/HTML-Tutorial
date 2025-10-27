@@ -33,6 +33,8 @@
  <!--Main wrapper*-->
 <div id="wrapper">
 
+    <nav>
+
 
 <header>
 <img src="assets/Home.jpg" alt="Portrait of Ocean Vuong">
@@ -44,12 +46,12 @@
 <article>
     <hr class="solid">
     <p>
-        Ocean Vuong, born in 1988 in Ho Chi Minh City (Vietnam), is a Vietnamese American poet, novelist, and professor. He emigrated to the United States with his family in 1990 and grew up in Connecticut. 
+        Humans of New York began as Brandon Stanton photography project in 2010. The initial goal was to photograph 10,000 New Yorkers on the street, and create an exhaustive catalogue of the city’s inhabitants.
 
 
     </p>
     <p>
-        Author of the critically acclaimed poetry collections Night Sky with Exit Wounds and Time Is a Mother, as well as the New York Times bestselling novel On Earth We’re Briefly Gorgeous. A recipient of the MacArthur Fellowship and the American Book Award, he once worked, which inspired The Emperor of Gladness. Born in Saigon, Vietnam, he currently splits his time between Northampton, Massachusetts, and New York City.
+        Taken together, these portraits and captions became the subject of a vibrant blog. HONY now has over twenty million followers on social media, and provides a worldwide audience with daily glimpses into the lives of strangers on the streets of New York City. 
     </p>
 </article>
 </main>
@@ -59,7 +61,23 @@
 
 </footer>
 </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburgerButton = document.querySelector('.hamburger-menu button');
+            const closeButton = document.querySelector('.close-menu');
+            const menu1 = document.querySelector('.menu1');
 
+            // Gestion de l'ouverture du menu
+            hamburgerButton.addEventListener('click', () => {
+                menu1.classList.add('menu-deployed');
+            });
+
+            // Gestion de la fermeture du menu
+            closeButton.addEventListener('click', () => {
+                menu1.classList.remove('menu-deployed');
+            });
+        });
+    </script>
 
 </body>
 </html>
