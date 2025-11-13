@@ -1,0 +1,25 @@
+/* Basic reset for the menu */
+body { font-family: Arial, Helvetica, sans-serif; margin: 20px; }
+nav { margin-bottom: 20px; }
+.menu { list-style: none; padding: 0; margin: 0; display: flex; gap: 10px; }
+.menu li { position: relative; }
+.menu a { display: block; padding: 8px 12px; color: #222; text-decoration: none; border-radius: 4px; }
+.menu a:hover, .menu a:focus { background: #eee; }
+
+/* Dropdown styles */
+.dropdown { display: none; position: absolute; left: 0; top: 100%; background: white; box-shadow: 0 6px 12px rgba(255, 0, 0, 0.1); list-style: none; padding: 6px 0; margin: 6px 0 0 0; min-width: 140px; border-radius: 4px; }
+.dropdown li a { padding: 8px 12px; }
+.dropdown li a:hover, .dropdown li a:focus { background: #f5f5f5; }
+
+/* Show the dropdown on hover or when the parent has focus-within for keyboard users */
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown { display: block; }
+
+/* Small responsive tweak for narrow screens */
+@media (max-width: 480px) {
+	.menu { flex-direction: column; align-items: flex-start; }
+	.dropdown { position: static; box-shadow: none; margin-left: 12px; }
+}
+
+/* Footer alignment */
+footer small { display: block; text-align: right; }
