@@ -1,3 +1,16 @@
+/* Pixelogist font (loaded from assets folder) */
+@font-face {
+	font-family: 'Pixelogist';
+	src: url('assets/Pixelogist.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Apply Pixelogist to header title; falls back to system fonts if missing */
+header h1 {
+	font-family: 'Pixelogist', Arial, Helvetica, sans-serif;
+}
+
 /* Basic reset for the menu */
 body { font-family: Arial, Helvetica, sans-serif; margin: 20px; }
 nav { margin-bottom: 20px; }
@@ -23,3 +36,5 @@ nav { margin-bottom: 20px; }
 
 /* Footer alignment */
 footer small { display: block; text-align: right; }
+
+
