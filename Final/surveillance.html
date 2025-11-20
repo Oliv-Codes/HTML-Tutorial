@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>"INDEX"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEILLENCE CAPATILISM</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        /* Page background color and base text color (change the hex to your preferred color) */
+        body { background: #5dd5d3; color: #000000; }
+    </style>
+</head>
+
+<!-- Show title -->
+<header>
+<h1>WHAT IS SURVEILLANCE CAPITALISM?</h1>
+</header>
+
+<!-- Navigation -->
+ <nav>
+        <ul class="menu">
+            <li class="has-dropdown">
+                <a href="index.html">INDEX ▾</a>
+                <ul class="dropdown">
+                    <li><a href="surveillance.html">What is serveillance capitilism</a></li>
+                    <li><a href="peerpressure.html">Peer Pressure</a></li>
+                    <li><a href="privacy.html">Privacy on Social Media</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </nav>
+
+
+
+<body class="surveillance">
+        <article>
+    <h2>Surveillance Capitilism</h2>
+    <hr class="solid">
+    <p class="text1">
+        text
+    </p>
+    <p class="text2">
+        text
+    </p>
+   
+   <footer>
+    <small>This website was created as part of a school project. </small>
+
+</footer>
+
+<!-- Flashlight follow script (global): updates --cursorX/--cursorY on :root so the
+         body::before overlay follows the pointer across the entire page -->
+<script>
+        (function () {
+            var target = document.querySelector('body.surveillance');
+            if (!target) return; // only run on surveillance page
+
+            function setPos(x, y) {
+                target.style.setProperty('--cursorX', x + 'px');
+                target.style.setProperty('--cursorY', y + 'px');
+            }
+
+            // Mouse movement across window
+            window.addEventListener('mousemove', function (e) {
+                setPos(e.clientX, e.clientY);
+            }, { passive: true });
+
+            // Touch support for mobile
+            window.addEventListener('touchmove', function (e) {
+                if (e.touches && e.touches[0]) {
+                    setPos(e.touches[0].clientX, e.touches[0].clientY);
+                }
+            }, { passive: true });
+
+            // When pointer leaves window, move the spotlight off-screen
+            window.addEventListener('mouseout', function (e) {
+                if (!e.relatedTarget) setPos(-200, -200);
+            });
+        }());
+</script>
+
+</body>
+</html>
