@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>"CLICK TO CONTINUE"</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURVEILLENCE CAPATILISM</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        /* Page background color and base text color (change the hex to your preferred color) */
+        body { background: #dce6b9; color: #000000; }
+    </style>
+</head>
+
+
+
+
+<body>
+            <li class = peer1><a href="peerpressure.html">Sell your soul to view</a></li>
+
+            <!-- Skip button: when clicked, reveal the message 'do it' -->
+            <div class="peer2">
+                <button id="skipBtn" type="button">Skip</button>
+                <!-- make span a block under the button but initially invisible -->
+                <span id="skipMsg" aria-live="polite" style="display:block; visibility:hidden; margin-top:8px; text-align:center;">Do it</span>
+            </div>
+
+     <footer>
+    <small>This website was created as part of a school project. </small>
+
+</footer>
+
+<script>
+    (function () {
+        var btn = document.getElementById('skipBtn');
+        var msg = document.getElementById('skipMsg');
+        if (!btn || !msg) return;
+        btn.addEventListener('click', function () {
+            msg.style.visibility = 'visible';
+            msg.setAttribute('role', 'status');
+        });
+    }());
+</script>
+
+</body>
+</html>

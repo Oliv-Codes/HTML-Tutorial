@@ -14,3 +14,4 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 > - This project used https://codemyui.com/flashlight-mouse-pointer/
 > - This project used https://animate.style/
+> - https://www.dafont.com/pixelogist.font
